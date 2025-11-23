@@ -1,0 +1,21 @@
+<main>
+    <h2>
+        Perfil de usuario
+    </h2>
+    {{#if isAdmin}}
+         <span>{{ name }}</span>
+         <span>tus cursos son:</span>
+        {{#each notas}}
+         <div>
+            <p>curso: {{this.curso}}</p>
+            <p>nota: {{this.nota}}</p>
+         </div>
+         <hr>
+        {{/each}}
+    {{else}}
+        <span>No autorizado</span>
+    {{/if}}
+    </div>
+</main>
+
+<script src="js/perfil.js"></script>
